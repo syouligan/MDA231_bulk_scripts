@@ -79,7 +79,7 @@ CommandPE="STAR --genomeDir $STARDir \
 --quantMode TranscriptomeSAM \
 --outWigStrand Stranded"
 
-CommandSE="STAR --genomeDir $genomeDir \
+CommandSE="STAR --genomeDir $STARDir \
 --outFileNamePrefix $outDir/$sample. \
 --readFilesIn $inFile1 \
 --outSAMunmapped Within \
