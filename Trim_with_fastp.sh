@@ -31,10 +31,10 @@ echo "# in samples array ${#sample_arr[@]}"
 echo "names in samples array ${sample_arr[@]}"
 
 # Submit command for each sample in array
-# for sample in ${sample_arr[@]}; do
+for sample in ${sample_arr[@]}; do
 
 # Runs loop for only the first sample in array (used for development)
-for sample in ${sample_arr[0]}; do
+# for sample in ${sample_arr[0]}; do
 
 # Define input directory, define and make output and log directories
 inPath=$sample_Path/$sample
