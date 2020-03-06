@@ -25,7 +25,7 @@ STARDir=$genomeDir/$species/$genome/"STAR_"$readLength
 RSEMDir=$genomeDir/$species/$genome/"RSEM_"$readLength
 
 # Path for log files
-logDir=$homedir/$project/$QCdir
+logDir=$homedir/$project/$QCDir
 mkdir -p $logDir
 echo "logDir $logDir"
 
@@ -61,7 +61,7 @@ inFile2=$inPath/$sample"_trimmed_R2.fastq.gz"
 echo "inFile1 $inFile1 inFile2 $inFile2"
 
 # Command to be executed
-CommandSE="/home/scoyou/sarah_projects/SCmets_chrcha/MDA231_bulk_scripts/STAR_RSEM.sh $inFile1 "" $STARDir $RSEMDir str_SE $ncores $ncores"
+CommandSE="/home/scoyou/sarah_projects/SCmets_chrcha/MDA231_bulk_scripts/STAR_RSEM.sh $inFile1 '' $STARDir $RSEMDir str_SE $ncores $ncores"
 CommandPE="/home/scoyou/sarah_projects/SCmets_chrcha/MDA231_bulk_scripts/STAR_RSEM.sh $inFile1 $inFile2 $STARDir $RSEMDir str_PE $ncores $ncores"
 
 # Submit to queue

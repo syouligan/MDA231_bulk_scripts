@@ -17,7 +17,7 @@ QCDir="logs"
 inFileExt=".fastq.gz"
 
 # Path for log files
-logDir=$homedir/$project/$QCdir
+logDir=$homedir/$project/$QCDir
 mkdir -p $logDir
 echo "logDir $logDir"
 
