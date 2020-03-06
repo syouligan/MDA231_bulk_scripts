@@ -57,7 +57,7 @@ inFile2=$inPath/$sample"_trimmed_R2.fastq.gz"
 echo "inFile1 $inFile1 inFile2 $inFile2"
 
 # Command to be executed
-CommandPE="STAR --genomeDir STARDir \
+CommandPE="STAR --genomeDir $STARDir \
 --outFileNamePrefix $outDir/$sample. \
 --readFilesIn $inFile1 $inFile2 \
 --outSAMunmapped Within \
