@@ -33,5 +33,5 @@ rsemCommand="rsem-prepare-reference --gtf $inputDir/$annotation $inputDir/$seque
 echo "starCommand "$starCommand
 
 # Submit to queue
-qsub -P OsteoporosisandTranslationalResearch -N $tool$genome$i -b y -wd $logDir -j y -R y -l mem_requested=8G -pe smp 32 -V -m bea -M s.youlten@garvan.org.au $rsemCommand
+qsub -P OsteoporosisandTranslationalResearch -N $tool$genome$i -b y -wd $logDir -j y -R y -l mem_requested=8G -pe smp $ncores -V -m bea -M s.youlten@garvan.org.au $rsemCommand
 

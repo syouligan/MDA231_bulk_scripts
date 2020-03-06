@@ -7,7 +7,7 @@
 ncores=32
 
 #Make indexes for all standard lengths
-for i in 50 125
+for i in 40 125
 do
 
 # Experimental info (update for genome)
@@ -39,6 +39,6 @@ starCommand="STAR --runMode genomeGenerate --genomeDir $outDir --genomeFastaFile
 echo "starCommand "$starCommand
 
 # Submit to queue
-qsub -P OsteoporosisandTranslationalResearch -N $tool$genome$i -b y -wd $logDir -j y -R y -l mem_requested=8G -pe smp 32 -V -m bea -M s.youlten@garvan.org.au $starCommand
+qsub -P OsteoporosisandTranslationalResearch -N $tool$genome$i -b y -wd $logDir -j y -R y -l mem_requested=8G -pe smp $ncores -V -m bea -M s.youlten@garvan.org.au $starCommand
 
 done
