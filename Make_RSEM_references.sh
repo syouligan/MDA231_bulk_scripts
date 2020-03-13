@@ -30,7 +30,7 @@ echo "logDir "$logDir
 
 # Build star index for genome
 rsemCommand="rsem-prepare-reference --gtf $inputDir/$annotation $inputDir/$sequence $outDir"
-echo "starCommand "$starCommand
+echo "rsemCommand "rsemCommand
 
 # Submit to queue
 qsub -P OsteoporosisandTranslationalResearch -N $tool$genome$i -b y -wd $logDir -j y -R y -l mem_requested=8G -pe smp $ncores -V -m bea -M s.youlten@garvan.org.au $rsemCommand
