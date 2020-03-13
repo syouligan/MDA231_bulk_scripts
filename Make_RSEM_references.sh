@@ -12,7 +12,7 @@ QCDir="logs"
 species="genomes/human"
 genome="GRCh38"
 sequence="GRCh38.primary_assembly.genome.fa"
-annotation="gencode.v33.primary_assembly.annotation.gtf.gz"
+annotation="gencode.v33.primary_assembly.annotation.gtf"
 
 # Make directory structure
 homedir="/share/ClusterShare/biodata/contrib/scoyou"
