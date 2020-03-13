@@ -21,7 +21,7 @@ inFileExt=".Aligned.toTranscriptome.out.bam"
 
 genomeDir="/share/ClusterShare/biodata/contrib/scoyou"
 species="genomes/human"
-STARDir=$genomeDir/$species/$genome/$tool
+RSEMDir=$genomeDir/$species/$genome/$tool
 
 # Path for log files
 logDir=$homedir/$project/$QCDir
@@ -56,21 +56,23 @@ inFile1=$inPath/*$inFileExt
 echo "inFile1 $inFile1"
 
 # Command to be executed
-CommandPE="rsem-calculate-expression --bam 
---estimate-rspd
---no-bam-output
---seed 12345
---num-threads $ncores
---paired-end
---forward-prob 0
+CommandPE="rsem-calculate-expression --bam $infile1 \
+--estimate-rspd \
+--no-bam-output \
+--seed 12345 \
+--num-threads $ncores \
+--paired-end \
+--forward-prob 0 \
+$RSEMDir \
 $outDir"
 
-CommandSE="rsem-calculate-expression --bam 
---estimate-rspd
---no-bam-output
---seed 12345
---num-threads $ncores
---forward-prob 0
+CommandSE="rsem-calculate-expression --bam  $infile1 \
+--estimate-rspd \
+--no-bam-output \
+--seed 12345 \
+--num-threads $ncores \
+--forward-prob 0 \
+$RSEMDir \
 $outDir"
 
 # Submit to queue
