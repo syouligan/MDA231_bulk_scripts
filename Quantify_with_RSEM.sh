@@ -56,7 +56,7 @@ inFile1=$inPath/*$inFileExt
 echo "inFile1 $inFile1"
 
 # Command to be executed
-CommandPE="rsem-calculate-expression --bam $infile1 \
+CommandPE="rsem-calculate-expression --bam $inFile1 \
 --estimate-rspd \
 --no-bam-output \
 --seed 12345 \
@@ -66,7 +66,7 @@ CommandPE="rsem-calculate-expression --bam $infile1 \
 $RSEMDir \
 $outDir"
 
-CommandSE="rsem-calculate-expression --bam  $infile1 \
+CommandSE="rsem-calculate-expression --bam  $inFile1 \
 --estimate-rspd \
 --no-bam-output \
 --seed 12345 \
